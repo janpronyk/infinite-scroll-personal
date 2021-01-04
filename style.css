@@ -23,7 +23,7 @@ body {
 h1 {
     text-align: center;
     margin-top: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-size: 2.7rem;
     letter-spacing: 0.8rem;
 }
@@ -58,11 +58,23 @@ h1 {
     width: 100%;
 }
 
+#pexels-logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pexels-logo-link img {
+    max-width: 120px;
+    margin-left: 10px;
+}
+
 /* Media Query: Large Smartphone */
 @media screen and (max-width: 600px) {
     h1 {
         font-size: 1.5rem;    
         letter-spacing: 0.1rem;
+        margin-bottom: 20px;
     }
 
     .image-container {
