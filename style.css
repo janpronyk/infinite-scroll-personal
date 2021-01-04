@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+
+:root {
+    --bgColor: whitesmoke;
+    --textColor: rgb(22, 22, 22);
+    --mainFont: 'Oswald';
+}
 html {
     box-sizing: border-box;
 }
@@ -5,5 +13,7 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
-    background-color: rgb(241, 241, 241);
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    font-family: var(--mainFont), Courier, monospace;
 }
