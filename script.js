@@ -1,6 +1,7 @@
 // Unsplash API
 let count = 10;
-const apiURL = `https://api.pexels.com/v1/search?query=nature&per_page=${count}`;
+let currentPage = 1
+const apiURL = `https://api.pexels.com/v1/search?query=nature&page=${currentPage}&per_page=${count}`;
 
 const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');
@@ -26,7 +27,8 @@ function displayPhotos() {
         const img = document.createElement('img');
         setAttributes(img, {
             src: photo.src.medium,
-            alt: photo.photographer
+            alt: photo.photographer,
+            title: photo.photographer
         })
 
         // Create photo element
@@ -64,5 +66,16 @@ async function getPhotos() {
     }
 
 }
+
+// scroll loading of photos
+
+window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000) {
+        // getPhotos();
+        let i = 0
+        i++
+        console.log('load more triggered', i);
+    }
+})
 
 getPhotos()
